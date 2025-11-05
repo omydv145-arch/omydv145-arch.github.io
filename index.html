@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Om Yadav - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0f0f23;
+      --card: #1a1a2e;
+      --text: #e0e0ff;
+      --accent: #00d9ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: var(--card);
+      padding: 40px;
+      border-radius: 25px;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,217,255,0.2);
+    }
+    .photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 5px solid var(--accent);
+      box-shadow: 0 0 20px rgba(0,217,255,0.5);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 15px 0;
+      background: linear-gradient(45deg, #00d9ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .title {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+    .bio {
+      font-size: 1rem;
+      opacity: 0.8;
+      margin: 15px 0;
+      line-height: 1.6;
+    }
+    .social {
+      margin: 25px 0;
+    }
+    .social a {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0 15px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .social a:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+    .email-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    .email-btn:hover {
+      background: #00aaff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- UPLOAD YOUR PHOTO AS 'photo.jpg' -->
+    <img src="photo.jpg" alt="Om Yadav" class="photo">
+    
+    <h1>Om Yadav</h1>
+    <p class="title">Full-Stack Developer</p>
+    <p class="bio">Creative coder from Nepal. Building sleek, fast, and modern websites.</p>
+    
+    <!-- EMAIL BUTTON -->
+    <a href="mailto:example@gmail.com" class="email-btn">Contact Me</a>
+    
+    <div class="social">
+      <!-- INSTAGRAM -->
+      <a href="https://instagram.com/omydv55" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <!-- GITHUB -->
+      <a href="https://github.com/omydv145-arch" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <!-- LINKEDIN (REMOVE IF NOT ACTIVE) -->
+      <a href="https://linkedin.com/in/omyadav" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</body>
+      </html>
