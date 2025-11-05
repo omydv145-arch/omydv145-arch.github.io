@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Om Yadav — Portfolio</title>
+  <style>
+    :root{
+      --bg1: #ffd54a;
+      --bg2: #ff8a00;
+      --muted:#6b6b6b;
+      --accent:#111827;
+      --soft:#f7f7f8;
+      --radius:28px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      -webkit-font-smoothing:antialiased;
+      color:var(--accent);
+      padding:40px;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* Main card */
+    .card{
+      width:100%;
+      max-width:1100px;
+      background:var(--soft);
+      border-radius:var(--radius);
+      padding:36px;
+      box-shadow: 0 12px 40px rgba(17,24,39,0.18);
+      display:flex;
+      gap:28px;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* Top nav */
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      width:100%;
+      position:absolute;
+      top:20px;
+      left:36px;
+      right:36px;
+    }
+    .nav h1{font-size:18px; margin:0; font-weight:600;}
+    .nav .links{display:flex; gap:20px; font-size:15px; color:var(--muted);}
+    .nav .hamburger{display:none; cursor:pointer;}
+
+    /* left phone mockup */
+    .phone-mock{
+      width:220px;
+      min-width:200px;
+      max-width:240px;
+      border-radius:28px;
+      padding:18px;
+      background:#000;
+      color:#fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      transform:translateY(6px);
+    }
+    .phone-mock .topbar{
+      height:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      font-size:13px;
+    }
+    .phone-screen{
+      margin-top:16px;
+      background:#fff;
+      color:var(--accent);
+      border-radius:16px;
+      padding:22px;
+      text-align:center;
+    }
+    .phone-screen img{
+      width:84px;height:84px;border-radius:50%;object-fit:cover;border:6px solid #fff;
+      box-shadow:0 6px 18px rgba(15,23,42,0.08);
+    }
+    .phone-screen h2{margin:10px 0 4px;font-size:20px}
+    .phone-screen p{margin:0;color:var(--muted);font-size:14px}
+
+    /* big center hero */
+    .hero{
+      flex:1;
+      display:flex;
+      gap:34px;
+      align-items:center;
+      justify-content:center;
+      padding:20px 10px;
+    }
+    .portrait{
+      width:240px;height:240px;border-radius:50%;
+      background:linear-gradient(180deg,#fff,#f1f1f2);
+      display:flex;align-items:center;justify-content:center;
+      overflow:hidden;flex-shrink:0;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.08);
+    }
+    .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .info{
+      max-width:520px;
+    }
+    .info small{color:var(--muted); display:block; margin-bottom:6px}
+    .info h2{font-size:40px;margin:0 0 6px;letter-spacing:-0.6px}
+    .info h3{margin:0;color:var(--muted);font-weight:600;font-size:18px}
+    .actions{display:flex;gap:12px;margin-top:18px;align-items:center}
+    .btn{
+      padding:10px 18px;border-radius:999px;border:1px solid rgba(17,24,39,0.08);
+      background:#fff;font-weight:600;cursor:pointer;text-decoration:none;color:var(--accent);
+      box-shadow: 0 6px 18px rgba(17,24,39,0.04);
+    }
+    .btn.primary{background:var(--accent);color:#fff;border:0}
+    .socials{display:flex;gap:12px;margin-top:12px;align-items:center}
+    .icon{
+      width:36px;height:36px;border-radius:999px;background:#fff;display:inline-flex;align-items:center;justify-content:center;
+      box-shadow: 0 6px 18px rgba(17,24,39,0.04); text-decoration:none;color:var(--accent)
+    }
+
+    /* responsive */
+    @media (max-width:900px){
+      body{padding:22px}
+      .card{flex-direction:row; gap:18px; padding:20px}
+      .nav{left:20px;right:20px}
+      .portrait{width:200px;height:200px}
+      .phone-mock{display:block}
+    }
+
+    @media (max-width:700px){
+      .card{
+        flex-direction:column;
+        padding:18px;
+      }
+      .nav .links{display:none}
+      .nav .hamburger{display:block}
+      .hero{flex-direction:column-reverse; gap:18px; padding:0}
+      .phone-mock{
+        width:140px; min-width:140px; margin-bottom:8px;
+        transform:none; order: -1;
+      }
+      .portrait{width:160px;height:160px}
+      .info h2{font-size:28px}
+      .info h3{font-size:15px}
+      .nav{position:static;margin-bottom:8px;left:auto;right:auto;top:auto}
+    }
+
+    /* small nav menu */
+    .mobile-menu{
+      display:none;
+      background:white;
+      position:absolute;
+      top:72px;
+      right:36px;
+      border-radius:12px;
+      box-shadow:0 12px 40px rgba(17,24,39,0.12);
+      padding:12px;
+    }
+    .mobile-menu a{display:block;padding:8px 12px;color:var(--accent);text-decoration:none;border-radius:8px}
+    .mobile-menu a:hover{background:#f3f4f6}
+    .mobile-menu.show{display:block}
+  </style>
+</head>
+<body>
+
+  <main class="card" aria-label="Portfolio card">
+    <div class="nav" role="navigation" aria-label="Main navigation">
+      <h1>Om Yadav</h1>
+      <div class="links" aria-hidden="false">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <!-- simple svg hamburger -->
+        <svg width="22" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Left: phone mockup (appears smaller on mobile) -->
+    <div class="phone-mock" aria-hidden="false">
+      <div class="topbar">
+        <div style="opacity:.9;font-weight:600">Om Yadav</div>
+        <div style="opacity:.55;font-size:13px">☰</div>
+      </div>
+      <div class="phone-screen">
+        <img src="profile.jpg" alt="Om Yadav portrait" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;200&#39; height=&#39;200&#39;><rect width=&#39;100%&#39; height=&#39;100%&#39; fill=&#39;%23eee&#39;/><text x=50% y=50% dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; font-size=20 fill=&#39;%23999&#39;>profile.jpg</text></svg>'">
+        <small style="display:block;margin-top:10px;color:#9aa0a6">Hello, I'm</small>
+        <h2 style="margin:8px 0 0">Om Yadav</h2>
+        <p style="margin-top:6px;font-size:13px;color:var(--muted)">Frontend Developer</p>
+
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+          <a class="btn" href="#download">Download CV</a>
+          <a class="btn primary" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center / right hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="portrait" aria-hidden="false">
+        <img src="profile.jpg" alt="Om Yadav portrait large" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;400&#39; height=&#39;400&#39;><rect width=&#39;100%&#39; height=&#39;100%&#39; fill=&#39;%23f6f6f6&#39;/><text x=50% y=50% dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; font-size=24 fill=&#39;%23bbb&#39;>profile.jpg</text></svg>'">
+      </div>
+
+      <div class="info">
+        <small>Hello, I'm</small>
+        <h2>Om Yadav</h2>
+        <h3>Frontend Developer</h3>
+
+        <div class="actions">
+          <a class="btn" href="#download">Download CV</a>
+          <a class="btn primary" href="#contact">Contact Info</a>
+        </div>
+
+        <div class="socials" aria-label="Social links">
+          <!-- LinkedIn -->
+          <a class="icon" href="#" title="LinkedIn" role="link" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 4.5h3.5V20H4zM5.75 3a2.25 2.25 0 110 4.5 2.25 2.25 0 010-4.5zM10 10h3.2v1.3h.05c.44-.84 1.52-1.73 3.13-1.73 3.35 0 4 2.2 4 5.06V20H18v-4.2c0-1-0-2.3-1.4-2.3-1.4 0-1.6 1.08-1.6 2.2V20h-4V10z" fill="#111"/>
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a class="icon" href="#" title="GitHub" role="link" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 .5C5.73.5.9 5.33.9 11.6c0 4.68 3.03 8.65 7.24 10.05.53.1.72-.23.72-.5 0-.25-.01-.92-.01-1.8-2.95.64-3.57-1.3-3.57-1.3-.48-1.24-1.17-1.57-1.17-1.57-.96-.66.07-.65.07-.65 1.06.07 1.62 1.09 1.62 1.09.95 1.62 2.5 1.15 3.11.88.1-.68.37-1.15.67-1.41-2.36-.27-4.84-1.18-4.84-5.25 0-1.16.41-2.11 1.09-2.85-.11-.27-.47-1.36.1-2.83 0 0 .89-.29 2.92 1.09a10.06 10.06 0 012.66-.36c.9 0 1.81.12 2.66.36 2.03-1.38 2.92-1.09 2.92-1.09.57 1.47.21 2.56.1 2.83.68.74 1.09 1.69 1.09 2.85 0 4.08-2.49 4.98-4.86 5.24.38.33.72.98.72 1.97 0 1.42-.01 2.56-.01 2.9 0 .27.19.61.73.5 4.2-1.4 7.22-5.37 7.22-10.05C23.1 5.33 18.27.5 12 .5z" fill="#111"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- mobile menu (hidden desktop) -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </main>
+
+  <script>
+    // hamburger toggle
+    const ham = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    if (ham && menu) {
+      ham.addEventListener('click', () => {
+        menu.classList.toggle('show');
+        menu.setAttribute('aria-hidden', !menu.classList.contains('show'));
+      });
+      ham.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') ham.click();
+      });
+    }
+  </script>
+</body>
+  </html>
