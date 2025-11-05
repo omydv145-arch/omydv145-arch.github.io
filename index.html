@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Yadav | Student & Changemaker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --accent: #7c3aed;
+      --light: #e5e7eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #5b21b6, #9333ea);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 6px solid white;
+      object-fit: cover;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* MAIN CONTENT */
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .about {
+      background: var(--card);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .about h2 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .about p {
+      color: #4b5563;
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+    }
+
+    .btn:hover {
+      background: #6d28d9;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+    }
+
+    /* PROJECTS */
+    .projects {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .projects h2 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .projects p {
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f1f5f9;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .socials {
+      margin-bottom: 18px;
+    }
+
+    .socials a {
+      color: var(--accent);
+      font-size: 1.7rem;
+      margin: 0 16px;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #5b21b6;
+      transform: translateY(-4px);
+    }
+
+    footer p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* RESPONSIVE: PHONE vs PC */
+    @media (min-width: 768px) {
+      header {
+        padding: 80px 20px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      .profile-img {
+        width: 160px;
+        height: 160px;
+      }
+      header h1 { font-size: 3rem; }
+      header p { font-size: 1.3rem; }
+      .about, .projects { padding: 50px; }
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 2rem; }
+      .profile-img { width: 110px; height: 110px; }
+      .about, .projects { padding: 30px 20px; }
+      .btn { padding: 12px 24px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="photo.jpg" alt="Om Yadav" class="profile-img">
+    <h1>Om Yadav</h1>
+    <p>Student | Business, Finance & Social Work</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- ABOUT -->
+    <div class="about">
+      <h2>About Me</h2>
+      <p>
+        Hey, I’m Om Yadav — a student interested in business, finance, and social work. 
+        I love learning new things and want to give back to society in my own way.
+      </p>
+      <a href="mailto:example@gmail.com" class="btn">Get in Touch</a>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="projects">
+      <h2>My Work</h2>
+      <p>
+        Exploring ideas in business, social impact, and personal growth. 
+        Check out my journey on 
+        <a href="https://github.com/omydv145-arch" target="_blank" style="color:#7c3aed; font-weight:600;">GitHub</a>!
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="socials">
+      <a href="https://instagram.com/omydv55" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com/in/omyadav" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/omydv145-arch" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <p>© 2025 Om Yadav | Learning, Growing, Giving Back</p>
+  </footer>
+
+</body>
+</html>
